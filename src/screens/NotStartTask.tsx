@@ -6,6 +6,7 @@ import { Provider } from 'react-native-paper';
 import AddTask from './bottom-sheet/AddTask';
 import { ScrollView } from 'react-native-gesture-handler';
 import { PRIMARY_COLOR } from '../utils/constants';
+import List from '../components/List';
 
 
 export default function NotStartTask(){
@@ -22,7 +23,22 @@ export default function NotStartTask(){
     return(
         <Provider>
             <View style={styles.container}>
-                <Text style={styles.title}>Pas débutée</Text>
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <List
+                        text="CRUD of Partenaire"
+                        isCompleted={false}
+                        categoryName="StoreManagementApp"
+                        dueDate='25/03/2022'
+                        onPress={{}}
+                    />
+                    <List
+                        text="CRUD of Store"
+                        isCompleted={true}
+                        categoryName="StoreManagementApp"
+                        dueDate='25/03/2022'
+                        onPress={{}}
+                    />
+                </ScrollView>
                 <FloatingAction
                         overlayColor='rgba(68, 68, 68, 0.1)'
                         color='#e44232'
@@ -37,41 +53,27 @@ export default function NotStartTask(){
                     onDismiss = { () => {
                         setShow(false);
                     }}
-                    
                     >
                 <ScrollView contentContainerStyle= {{padding: 16}}>
-                <TextInput
-                    placeholder='Username'
-                    style={styles.input}
-                />
-                <TextInput
-                    placeholder='Username'
-                    style={styles.input}
-                />
-                <TextInput
-                    placeholder='Username'
-                    style={styles.input}
-                />
-                <TextInput
-                    placeholder='Username'
-                    style={styles.input}
-                />
-                <TextInput
-                    placeholder='Username'
-                    style={styles.input}
-                />
-                <TextInput
-                    placeholder='Username'
-                    style={styles.input}
-                />
-                <TextInput
-                    placeholder='Username'
-                    style={styles.input}
-                />
+                        <TextInput
+                            placeholder='Username'
+                            style={styles.input}
+                        />
+                        <TextInput
+                            placeholder='Username'
+                            style={styles.input}
+                        />
+                        <TextInput
+                            placeholder='Username'
+                            style={styles.input}
+                        />
+                        <TextInput
+                            placeholder='Username'
+                            style={styles.input}
+                        />
                 </ScrollView>
                 </AddTask>
             </View>
-            
         </Provider>
         
     );
@@ -82,7 +84,6 @@ export default function NotStartTask(){
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      justifyContent: "center",
       padding: 16
     },
     input: {
