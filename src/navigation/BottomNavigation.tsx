@@ -2,7 +2,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Login from "../screens/Login";
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import { PRIMARY_COLOR } from "../utils/constants";
+import { PRIMARY_COLOR, SECONDAY_COLOR } from "../utils/constants";
 import Tasks from "../screens/Tasks";
 import Settings from "../screens/Settings";
 
@@ -47,10 +47,10 @@ export const BottomNavigation = () => {
             <Tab.Screen name="home" options={{
                 title: "Mes tâches",
                 headerTitleStyle: {
-                    color : PRIMARY_COLOR
+                    color : "#fff"
                 },
                 headerStyle: {
-                    backgroundColor: "#fff",
+                    backgroundColor: PRIMARY_COLOR,
                     elevation: 5,
 
                 }, 

@@ -1,4 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View } from 'react-native';
 import { Text } from 'react-native-elements';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
@@ -13,6 +14,8 @@ export default function App() {
           <NavigationContainer>
             <BottomNavigation/>
           </NavigationContainer>
+          <StatusBar style="light" />
+
       </SafeAreaProvider>
 
           

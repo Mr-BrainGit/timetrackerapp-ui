@@ -1,5 +1,5 @@
-const PRIMARY_COLOR = "#292361";
-const SECONDAY_COLOR = "#ffedbf";
+const PRIMARY_COLOR = "#e44232";
+const SECONDAY_COLOR = "#2c1338";
 const TERTIARY_COLOR = "#fe6a6b";
 
 

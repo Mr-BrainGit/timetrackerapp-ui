@@ -5,6 +5,7 @@ import { FloatingAction } from "react-native-floating-action";
 import { Provider } from 'react-native-paper';
 import AddTask from './bottom-sheet/AddTask';
 import { ScrollView } from 'react-native-gesture-handler';
+import { PRIMARY_COLOR } from '../utils/constants';
 
 
 export default function NotStartTask(){
@@ -23,6 +24,8 @@ export default function NotStartTask(){
             <View style={styles.container}>
                 <Text style={styles.title}>Pas débutée</Text>
                 <FloatingAction
+                        overlayColor='rgba(68, 68, 68, 0.1)'
+                        color='#e44232'
                         actions={actions}
                         onPressItem={name => {
                             setShow(true)
@@ -65,8 +68,6 @@ export default function NotStartTask(){
                     placeholder='Username'
                     style={styles.input}
                 />
-                    {Array.from({length: 40}).map((_, index) => <Text>Pas débutée</Text>
-)}
                 </ScrollView>
                 </AddTask>
             </View>
