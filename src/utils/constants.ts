@@ -3,6 +3,9 @@ const SECONDAY_COLOR = "#2c1338";
 const TERTIARY_COLOR = "#fe6a6b";
 const primaryStart = '#f78ca0';
 const primaryEnd = '#fe9a8b';
+
+export const inputErrorColor = "#e00707";
+
 export const primaryGradientArray = [primaryStart, primaryEnd];
 export const lightWhite = '#fcefe9';
 export const inputPlaceholder = '#f1a895';

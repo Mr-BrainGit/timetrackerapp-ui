@@ -8,7 +8,7 @@ import Settings from "../screens/Settings";
 
 
 export type routeParams = {
-    home: undefined
+    task: undefined
     add: undefined
     settings: undefined
 }
@@ -25,7 +25,7 @@ export const BottomNavigation = () => {
                 
                 tabBarIcon: ({ focused, color, size }) => {
                 switch (route.name) {
-                    case 'home':
+                    case 'task':
                         return <Ionicons name={'calendar-outline'} size={size} color={color} />;
                         break;
                     case 'add':
@@ -44,7 +44,7 @@ export const BottomNavigation = () => {
                 tabBarInactiveTintColor: 'gray',
             })}
         >
-            <Tab.Screen name="home" options={{
+            <Tab.Screen name="task" options={{
                 title: "Mes tâches",
                 headerTitleStyle: {
                     color : "#fff"

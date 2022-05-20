@@ -1,5 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
+import { PRIMARY_COLOR } from '../utils/constants';
 
 type Props = {
     title: string;
@@ -19,7 +20,7 @@ export default CustumButton;
 const styles = StyleSheet.create({
     appButtonContainer: {
         elevation: 10,
-        backgroundColor: "#1d50da",
+        backgroundColor: PRIMARY_COLOR,
         borderRadius: 5,
         paddingVertical: 18,
         paddingHorizontal: 12
