@@ -12,7 +12,7 @@ export const circleActive = '#039c1e';
 export const taskCompleteColor = '#039c1e';
 
 export const itemListText = '#555555';
-export const itemListTextStrike = '#c4c4cc';
+export const itemListTextStrike = '#555';
 export const deleteIconColor = '#bc2e4c';
 
 

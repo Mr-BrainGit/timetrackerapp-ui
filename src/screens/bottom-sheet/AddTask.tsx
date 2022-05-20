@@ -5,7 +5,7 @@ import { PRIMARY_COLOR } from '../../utils/constants';
 
 function AddTask({show, onDismiss, children}){
 
-    const bottomSheetHeigth = Dimensions.get("window").height * 0.7;
+    const bottomSheetHeigth = Dimensions.get("window").height * 0.63;
     const deviceWidth = Dimensions.get("window").width;
     const bottom = useRef(new Animated.Value(-bottomSheetHeigth)).current;
     const [open, setOpen] = useState(show)
@@ -15,13 +15,13 @@ function AddTask({show, onDismiss, children}){
             setOpen(show);
             Animated.timing(bottom, {
                 toValue: 0,
-                duration: 200,
+                duration: 300,
                 useNativeDriver: false
             }).start()
         }else{
             Animated.timing(bottom, {
                 toValue: -bottomSheetHeigth,
-                duration: 200,
+                duration: 300,
                 useNativeDriver: false
             }).start(() => {
                 setOpen(false)
@@ -82,7 +82,6 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 20,
         borderTopRightRadius: 20,
         overflow: "hidden",
-
         
 
     },
@@ -96,7 +95,7 @@ const styles = StyleSheet.create({
             height: -3,
             width: 0
         },
-        shadowOpacity: 0.24,
+        shadowOpacity: 0.10,
         shadowRadius: 4,
         elevation: 3
     },
@@ -106,11 +105,7 @@ const styles = StyleSheet.create({
         left: 180,
         zIndex: 10,
     },
-    backDrop: {
-        ...StyleSheet.absoluteFillObject,
-        zIndex: 80,
-        backgroundColor: 'red'
-    },
+    
     title :{
         position : "absolute",
         top : 10,

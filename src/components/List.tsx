@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 import {
@@ -20,23 +20,31 @@ type Props = {
     isCompleted: boolean;
     categoryName: string
     dueDate: string
-    onPress?: any;
+    onToggleCircle?: () => void;
 }
+	
 
 const List = (props: Props) => {
+
+  const [isCompleted, setIsCompleted] = useState(props.isCompleted);
+
+  const onToggleCircle = () => {
+	props.onToggleCircle && props.onToggleCircle();
+	setIsCompleted(!isCompleted);
+  };
   return (
     <TouchableOpacity onPressOut={() => {}}>
         <View style={styles.container}>
-                <TouchableOpacity onPress={() => {}}>
+                <TouchableOpacity onPress={onToggleCircle}>
 						<View
 							style={[
 								styles.circle,
-								props.isCompleted
+								isCompleted
 									? { borderColor: circleActive, backgroundColor: taskCompleteColor }
 									: { borderColor: circleInactive }
 							]}
 						>
-                        {props.isCompleted ? (
+                        {isCompleted ? (
                         <Ionicons name={'checkmark-outline'} size={23} color='white' />
 
                     ) : null}
@@ -45,9 +53,10 @@ const List = (props: Props) => {
 				<View style={styles.column}>
 					
 					<Text
+					numberOfLines={1}
 						style={[
 							styles.text,
-							props.isCompleted
+							isCompleted
 								? {
 										color: itemListTextStrike,
 										textDecorationLine: 'line-through'
@@ -81,7 +90,7 @@ const List = (props: Props) => {
                     
                     
 				</View>
-				{props.isCompleted ? (
+				{isCompleted ? (
 					<View style={styles.button}>
 						<TouchableOpacity onPressOut={() => {}}>
                             <Ionicons name={'trash-outline'} size={24} color={deleteIconColor} />
@@ -110,7 +119,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'flex-start',
 		marginTop: 5,
         borderWidth: 1,
-        borderColor: SECONDAY_COLOR,
+        borderColor: "#b8b8b8",
 		marginBottom: 10,
         paddingTop: 10
 		

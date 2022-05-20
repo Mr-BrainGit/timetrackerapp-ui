@@ -29,14 +29,29 @@ export default function NotStartTask(){
                         isCompleted={false}
                         categoryName="StoreManagementApp"
                         dueDate='25/03/2022'
-                        onPress={{}}
+                        onToggleCircle={() => {
+                            console.log('onToggleCircle');
+                            
+                        }}
                     />
                     <List
                         text="CRUD of Store"
-                        isCompleted={true}
+                        isCompleted={false}
                         categoryName="StoreManagementApp"
                         dueDate='25/03/2022'
-                        onPress={{}}
+                    />
+                    <List
+                        text="Implément user expenses function in db"
+                        isCompleted={false}
+                        categoryName="StoreManagementApp"
+                        dueDate='25/03/2022'
+                    />
+                    <List
+                        text="Implément user details screens"
+                        isCompleted={false}
+                        categoryName="StoreManagementApp"
+                        dueDate='25/03/2022'
+                        
                     />
                 </ScrollView>
                 <FloatingAction
@@ -54,24 +69,24 @@ export default function NotStartTask(){
                         setShow(false);
                     }}
                     >
-                <ScrollView contentContainerStyle= {{padding: 16}}>
-                        <TextInput
-                            placeholder='Username'
-                            style={styles.input}
-                        />
-                        <TextInput
-                            placeholder='Username'
-                            style={styles.input}
-                        />
-                        <TextInput
-                            placeholder='Username'
-                            style={styles.input}
-                        />
-                        <TextInput
-                            placeholder='Username'
-                            style={styles.input}
-                        />
-                </ScrollView>
+                    <ScrollView contentContainerStyle= {{padding: 16}}>
+                            <TextInput
+                                placeholder='Username'
+                                style={styles.input}
+                            />
+                            <TextInput
+                                placeholder='Username'
+                                style={styles.input}
+                            />
+                            <TextInput
+                                placeholder='Username'
+                                style={styles.input}
+                            />
+                            <TextInput
+                                placeholder='Username'
+                                style={styles.input}
+                            />
+                    </ScrollView>
                 </AddTask>
             </View>
         </Provider>
