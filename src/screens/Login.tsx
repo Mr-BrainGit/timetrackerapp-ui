@@ -33,7 +33,7 @@ export default function Login() {
       resolver: yupResolver(validationSchema)
     })
     const navigation = useNavigation<NativeStackNavigationProp<routeParams>>();
-    
+
     function login(){
       navigation.navigate('home');
       
@@ -70,7 +70,6 @@ export default function Login() {
                     )} />
                 <CustumButton onPress={handleSubmit(login)} title='Se connecter'/>
               </View>
-              <StatusBar/>
         </ScrollView>
         
         
@@ -83,7 +82,7 @@ const styles = StyleSheet.create({
       flex: 1,
       justifyContent: "center",
       padding: 16,
-      marginTop: '40%'
+      marginTop: '30%'
     },
     input: {
       width: '80%',
