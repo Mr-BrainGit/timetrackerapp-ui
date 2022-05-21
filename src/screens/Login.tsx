@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useState } from 'react';
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Image, StyleSheet, Text, TextInput, Vibration, View } from 'react-native';
 import CustumButton from '../components/CustumButton';
 import { routeParams } from '../navigation/RootNavigator';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -36,6 +36,7 @@ export default function Login() {
 
     function login(){
       navigation.navigate('home');
+      Vibration.vibrate(1000, true);
       
     }
     return(
